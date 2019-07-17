@@ -1,0 +1,50 @@
+<div class="modal-header">
+  <h3>{{data.modalName}}</h3>
+</div>
+<div class="modal-body">
+  <form id="signup-form" role="form" ng-submit="restauracja()">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div ng-switch="currentStep.number">
+          <div ng-switch-when="1">
+            <ng-include src="'przyjecieEventowa.html'"></ng-include>
+          </div>
+          <div ng-switch-when="2">
+            <ng-include src="'liczbaGosci.html'"></ng-include>
+          </div>
+          <div ng-switch-when="3">
+            <ng-include src="'rodzajKuchni.html'"></ng-include>
+          </div>
+		  <div ng-switch-when="4">
+            <ng-include src="'miasto.html'"></ng-include>
+          </div>
+		 
+		  <div ng-switch-when="5">
+            <ng-include src="'dodatkoweOczekiwania.html'"></ng-include>
+          </div>
+		  <div ng-switch-when="6">
+            <ng-include src="'dodatkoweUslugi.html'"></ng-include>
+          </div>
+<!--
+		  <div ng-switch-when="7">
+            <ng-include src="'kalendarz.html'"></ng-include>
+          </div>-->
+		  <div ng-switch-when="7">
+            <ng-include src="'klimatLokalu.html'"></ng-include>
+          </div>
+		  <div ng-switch-when="8">
+            <ng-include src="'budzet.html'"></ng-include>
+          </div>
+		  <div ng-switch-when="9">
+            <ng-include src="'uwagi.html'"></ng-include>
+          </div>
+		  <div ng-switch-when="10">
+            <ng-include src="'email.html'"></ng-include>
+          </div>
+        </div>
+ 
+    </div>
+  </form>
+
+</div>

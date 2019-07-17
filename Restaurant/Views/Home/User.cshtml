@@ -1,0 +1,476 @@
+﻿@model Restaurant.Models.AdminUserViewModel
+@{
+    ViewData["Title"] = "Użytkownik";
+}
+
+<style>
+    .container-fluid {
+        background-image: url('/images/restaurant.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    tr, th {
+        width: 50%;
+    }
+</style>
+<div class="container">
+    <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" style="margin-top:2%;" /></a>
+
+    <h4>Agroturystyczne</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+  
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.agro)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+ 
+                    <td>
+                        <a asp-controller="Agro" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Agro" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4>Apartamenty</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.apartamenty)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Apartamenty" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Apartamenty" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4>Centra eventowe</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.centrumEventowe)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Eventowe" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Eventowe" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4>Domki letniskowe</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.domkiLetniskowe)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Letniskowe" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Letniskowe" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Domy weselne</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.domyWeselne)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="DomyWeselne" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="DomyWeselne" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Escape Roomy</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.escapeRomm)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="EscapeRoomy" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="EscapeRoomy" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Hotele</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.hotele)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Hotele" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Hotele" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Karczmy</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.karczmy)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Karczmy" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Karczmy" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Kawiarnie</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.kawiarnie)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Kawiarnie" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Kawiarnie" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Kluby</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.kluby)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Kluby" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Kluby" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Mieszkania</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.mieszkanie)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Mieszkania" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Mieszkania" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Puby</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.puby)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Puby" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Puby" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Centra rekreacji</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.rekreacji)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="CentraRekreacji" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="CentraRekreacji" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Restauracje</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.restauracje)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Restauracje" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Restauracje" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Sale zabaw</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.salaZabaw)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="SaleZabaw" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="SaleZabaw" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Ścianki wspinaczkowe</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.scianka)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="Scianki" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="Scianki" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>SPA</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nazwa
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.spa)
+            {
+                <tr>
+                    <th>
+                        @item.Nazwa
+                    </th>
+
+                    <td>
+                        <a asp-controller="SPA" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                        <a asp-controller="SPA" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

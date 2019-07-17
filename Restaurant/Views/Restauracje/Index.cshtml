@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Restauracje.Models.Restauracja>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" style="margin-top:2%;" /></a>
+<h2>Restauracje</h2>
+                      <style>
+                          .container-fluid {
+                              background-image: url('/images/restaurant.jpg');
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-attachment: fixed;
+                          }
+                      </style>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.iloscStolikow)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.rodzajKuchni)
+                </th>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.dodatkoweOczekiwania)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dodatkoweUslugi)
+                </th>
+                -->
+                <th>
+                    @Html.DisplayNameFor(model => model.klimatLokalu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nazwa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Miasto)
+                </th>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.Adder)
+                </th> -->
+                <th>
+                    @Html.DisplayNameFor(model => model.Link)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Przyjecia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxLiczbaGosci)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DodatkoweUwagi)
+                </th>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.Termin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Budzet)
+                </th>
+                -->
+                <th>
+                    @Html.DisplayNameFor(model => model.OplaconyAbonament)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.iloscStolikow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rodzajKuchni)
+            </td>
+            <!--
+            <td>
+                @Html.DisplayFor(modelItem => item.dodatkoweOczekiwania)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dodatkoweUslugi)
+            </td>
+                -->
+            <td>
+                @Html.DisplayFor(modelItem => item.klimatLokalu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Miasto)
+            </td>
+            <!--
+            <td>
+                @Html.DisplayFor(modelItem => item.Adder)
+            </td>-->
+            <td>
+                @Html.DisplayFor(modelItem => item.Link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Przyjecia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxLiczbaGosci)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DodatkoweUwagi)
+            </td>
+            <!--
+            <td>
+                @Html.DisplayFor(modelItem => item.Termin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Budzet)
+            </td>
+                -->
+            <td>
+                @Html.DisplayFor(modelItem => item.OplaconyAbonament)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> <br />
+              <!--  <a asp-action="Details" asp-route-id="@item.ID">Szczegóły</a> <br /> -->
+                <a asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+            </td>
+        </tr>
+        
+}
+    </tbody>
+</table>
+    

@@ -1,0 +1,166 @@
+﻿
+@{
+    ViewData["Title"] = "DodajLokal";
+}
+
+<style>
+    .container-fluid {
+	/*
+        background-image: url('/images/restaurant.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+		*/
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" style="margin-top:2%;" /></a>
+		 <h4 style="text-align:right;margin-right:20%;margin-top:1%;">
+            <a asp-controller="Account" asp-action="Login" style="color:#000">Zaloguj się by edytować swoje dane</a>
+        </h4>
+        <h2 style="color:#000">Dodaj Lokal</h2>
+        <div class="col-md-3">
+            <a asp-controller="Hotele" asp-action="Create">
+                <h3 class="dodajLokal" style="color:#000">Dodaj hotel do portalu</h3>
+                <img src="/images/hotel.jpg">
+                @*kliknij na obrazku by dodać restaurację*@
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-controller="DomyWeselne" asp-action="Create">
+                <h3 class="dodajLokal" style="color:#000">Dodaj dom weselny do portalu</h3>
+                <img src="~/images/weselny.jpg">
+               
+            </a>
+        </div>
+        <div class="col-md-3" >
+            <a asp-controller="Restauracje" asp-action="Create">
+                <h3 class="dodajLokal" style="color:#000">Dodaj restaurację do portalu</h3>
+                <img src="/images/restauracja.jpg">
+                @*kliknij na obrazku by dodać restaurację*@ 
+            </a>
+        </div>
+
+        <div class="clearfix">
+            <div class="col-md-3">
+                <a asp-controller="Apartamenty" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj apartament do portalu</h3>
+                    <img src="~/images/apartament.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a asp-controller="SaleBankietowe" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj salę bankietową do portalu</h3>
+                    <img src="~/images/salaBankietowa.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a asp-controller="SPA" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj SPA do portalu</h3>
+                    <img src="~/images/SPA.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-md-3">
+                <a asp-controller="Kluby" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj klub do portalu</h3>
+                    <img src="~/images/klub.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a asp-controller="Karczmy" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj karczmę do portalu</h3>
+                    <img src="/images/bar.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a asp-controller="Puby" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj pub do portalu</h3>
+                    <img src="~/images/pub.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+        </div>
+
+    <div class="clearfix">
+        <div class="col-md-3">
+            <a asp-controller="Kawiarnie" asp-action="Create">
+                <h3 class="dodajLokal" style="color:#000">Dodaj kawiarnię do portalu</h3>
+                <img src="/images/kawiarnia.jpg">
+                @*kliknij na obrazku by dodać restaurację*@
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-controller="EscapeRoomy" asp-action="Create">
+                <h3 class="dodajLokal" style="color:#000">Dodaj escape room do portalu</h3>
+                <img src="~/images/escape room.jpg">
+                @*kliknij na obrazku by dodać restaurację*@
+            </a>
+        </div>
+        
+        <div class="col-md-3">
+            <a asp-controller="Agro" asp-action="Create">
+                <h3 class="dodajLokal" style="color:#000">Dodaj gospodarstwo do portalu</h3>
+                <img src="~/images/agroturystyczne.jpg">
+                @*kliknij na obrazku by dodać restaurację*@
+            </a>
+        </div>
+    </div>
+        <div class="clearfix">
+            <div class="col-md-3">
+                <a asp-controller="SaleZabaw" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj salę zabaw do portalu</h3>
+                    <img src="~/images/salaZabaw.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a asp-controller="Scianki" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj ściankę wspinaczkową do portalu</h3>
+                    <img src="~/images/sciankaWspinaczkowa.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a asp-controller="Mieszkania" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj dom do portalu</h3>
+                    <img src="~/images/dom.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-md-3">
+                <a asp-controller="Letniskowe" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj domki letniskowe do portalu</h3>
+                    <img src="~/images/letniskowe.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a asp-controller="CentraRekreacji" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj centrum rekreacji do portalu</h3>
+                    <img src="~/images/centrumRekreacji.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a asp-controller="Eventowe" asp-action="Create">
+                    <h3 class="dodajLokal" style="color:#000">Dodaj centrum eventowe do portalu</h3>
+                    <img src="~/images/centrumEventowe.jpg">
+                    @*kliknij na obrazku by dodać restaurację*@
+                </a>
+            </div>
+        </div>
+</div>

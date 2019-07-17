@@ -1,0 +1,83 @@
+﻿@model Restauracje.Models.Restauracja
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<style>
+    .container-fluid {
+        background-image: url('/images/restaurant.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    table, h2, h3, h4, label,dt,dd {
+        color: #fff;
+    }
+    dt{width:300px !important;margin-right:30px;}
+
+        table a, table a:hover {
+            color: #FAD889;
+            font-weight: bold;
+        }
+</style>
+
+
+
+<div class="container">
+    <h2>Usuń</h2>
+    <h3>Czy jesteś pewien, że chcesz usunąć?</h3>
+    <h4>Restauracja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+      
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nazwa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Miasto)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.klimatLokalu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.klimatLokalu)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Miasto)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.OplaconyAbonament)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OplaconyAbonament)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Usuń" class="btn btn-default" /> |
+        <a asp-action="Index">Wróć do list</a>
+    </form>
+</div>

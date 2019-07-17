@@ -1,0 +1,177 @@
+﻿@model Restauracje.Models.Restauracja
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+    .container-fluid {
+        background-image: url('/images/restaurant.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+       
+    }
+    h4, label,a {color:#fff;}
+</style>
+
+
+<div class="container">
+    <div class="row">
+      
+        <div class="col-md-12">
+            <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" style="margin-top:2%;" /></a>
+            <h4>Dodaj restaurację do portalu</h4>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Nazwa" class="control-label"></label>
+                    <input asp-for="Nazwa" class="form-control" />
+                    <span asp-validation-for="Nazwa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Link" class="control-label"></label>
+                    <input asp-for="Link" class="form-control" />
+                    <span asp-validation-for="Link" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Miasto" class="control-label"></label>
+                    <input asp-for="Miasto" class="form-control" />
+                    <span asp-validation-for="Miasto" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="clearfix"></div>
+                <p style="color:#fff;">Organizowane przyjęcia :</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pretty p-icon p-jelly p-bigger">
+                            <input type="checkbox" name="przyjecie" id="wieczor" value="Wieczór panieński/kawalerski" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="wieczor">Wieczór panieński/kawalerski</label>
+                            </div>
+                        </div><br>
+                        
+                        <div class="pretty p-icon p-jelly p-bigger">
+                            <input type="checkbox" name="przyjecie" id="wigilia" value="Wigilia firmowa" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="wigilia">Wigilia firmowa</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="wesele" value="Wesele" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="wesele">Wesela</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="urodziny" value="Urodziny dla dzieci" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="urodziny">Urodziny dla dzieci</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="chrzciny" value="Spotkanie biznesowe" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="chrzciny">Chrzciny</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="komunie" value="Komunie" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="komunie">Komunie</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="stypa" value="Stypa" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="stypa">Stypy</label>
+                            </div>
+                        </div><br>
+                    </div>
+                    <div class="col-md-6 " >
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="koncerty" value="Koncerty" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="koncerty">Koncerty</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="osiemnastki" value="Osiemnastki" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="osiemnastki">Osiemnastki</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="firmowe" value="Imprezy firmowe" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="firmowe">Imprezy firmowe</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="sylwester" value="Sylwester" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="sylwester">Sylwester</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="dancingi" value="Dancingi" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="dancingi">Dancingi</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly p-bigger">
+                            <input type="checkbox" name="przyjecie" id="biznesowe" value="Przyjęcia biznesowe" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="biznesowe">Spotkania biznesowe</label>
+                            </div>
+                        </div><br>
+                        <div class="pretty p-icon p-jelly  p-bigger">
+                            <input type="checkbox" name="przyjecie" id="inne" value="Inne" class="form-control"></input>
+                            <div class="state  p-info">
+                                <label for="inne">Inne</label>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="iloscStolikow" class="control-label "></label>
+                    <input asp-for="iloscStolikow" class="form-control input-number–noSpinners" />
+                    <span asp-validation-for="iloscStolikow" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxLiczbaGosci" class="control-label"></label>
+                    <input asp-for="MaxLiczbaGosci" class="form-control input-number–noSpinners" />
+                    <span asp-validation-for="MaxLiczbaGosci" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="rodzajKuchni" class="control-label"></label>
+                    <input asp-for="rodzajKuchni" class="form-control" />
+                    <span asp-validation-for="rodzajKuchni" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="klimatLokalu" class="control-label"></label>
+                    <input asp-for="klimatLokalu" class="form-control" />
+                    <span asp-validation-for="klimatLokalu" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DodatkoweUwagi" class="control-label"></label>
+                    <textarea asp-for="DodatkoweUwagi" class="form-control" > </textarea>
+                    <span asp-validation-for="DodatkoweUwagi" class="text-danger"></span>
+                </div>
+               <div class="clearfix"></div>
+               
+               
+               
+                <div class="form-group">
+                    <input type="submit" value="Dodaj restaurację" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+   <br />
+</div>

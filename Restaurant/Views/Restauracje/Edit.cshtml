@@ -1,0 +1,120 @@
+﻿@model Restauracje.Models.Restauracja
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+    .container-fluid {
+        background-image: url('/images/restaurant.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
+
+<div class="container">
+    <h4>Restauracja</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ID" />
+                <div class="form-group">
+                    <label asp-for="iloscStolikow" class="control-label"></label>
+                    <input asp-for="iloscStolikow" class="form-control" />
+                    <span asp-validation-for="iloscStolikow" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="rodzajKuchni" class="control-label"></label>
+                    <input asp-for="rodzajKuchni" class="form-control" />
+                    <span asp-validation-for="rodzajKuchni" class="text-danger"></span>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label asp-for="dodatkoweOczekiwania" class="control-label"></label>
+                    <input asp-for="dodatkoweOczekiwania" class="form-control" />
+                    <span asp-validation-for="dodatkoweOczekiwania" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dodatkoweUslugi" class="control-label"></label>
+                    <input asp-for="dodatkoweUslugi" class="form-control" />
+                    <span asp-validation-for="dodatkoweUslugi" class="text-danger"></span>
+                </div>
+                    -->
+                <div class="form-group">
+                    <label asp-for="klimatLokalu" class="control-label"></label>
+                    <input asp-for="klimatLokalu" class="form-control" />
+                    <span asp-validation-for="klimatLokalu" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nazwa" class="control-label"></label>
+                    <input asp-for="Nazwa" class="form-control" />
+                    <span asp-validation-for="Nazwa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Miasto" class="control-label"></label>
+                    <input asp-for="Miasto" class="form-control" />
+                    <span asp-validation-for="Miasto" class="text-danger"></span>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label asp-for="Adder" class="control-label"></label>
+                    <input asp-for="Adder" class="form-control" />
+                    <span asp-validation-for="Adder" class="text-danger"></span>
+                </div>-->
+                <div class="form-group">
+                    <label asp-for="Link" class="control-label"></label>
+                    <input asp-for="Link" class="form-control" />
+                    <span asp-validation-for="Link" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Przyjecia" class="control-label"></label>
+                    <input asp-for="Przyjecia" class="form-control" />
+                    <span asp-validation-for="Przyjecia" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxLiczbaGosci" class="control-label"></label>
+                    <input asp-for="MaxLiczbaGosci" class="form-control" />
+                    <span asp-validation-for="MaxLiczbaGosci" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DodatkoweUwagi" class="control-label"></label>
+                    <input asp-for="DodatkoweUwagi" class="form-control" />
+                    <span asp-validation-for="DodatkoweUwagi" class="text-danger"></span>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label asp-for="Termin" class="control-label"></label>
+                    <input asp-for="Termin" class="form-control" />
+                    <span asp-validation-for="Termin" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Budzet" class="control-label"></label>
+                    <input asp-for="Budzet" class="form-control" />
+                    <span asp-validation-for="Budzet" class="text-danger"></span>
+                </div>
+                    -->
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="OplaconyAbonament" /> @Html.DisplayNameFor(model => model.OplaconyAbonament)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Zapisz zmiany" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div><br />
+    <div>
+        <a asp-action="Index">Powrót do listy</a>
+    </div>
+</div>
