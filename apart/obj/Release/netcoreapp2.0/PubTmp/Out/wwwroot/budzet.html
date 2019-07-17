@@ -1,0 +1,34 @@
+<div class="mainPage">
+<h3>Budżet przyjęcia<h3>
+<fieldset>
+    <legend>Proszę wstępnie określić budżet</legend>
+
+    <div class="pretty p-default p-round">
+        <input type="radio" id="1000" name="budzet" checked value="poniżej 1000"/>
+		<div class="state">
+        <label for="1000">poniżej 1000</label>
+		 </div>
+    </div><br>
+
+    <div class="pretty p-default p-round">
+        <input type="radio" id="2000" name="budzet" value="2000"/>
+		<div class="state">
+        <label for="2000">2000</label>
+		 </div>
+    </div><br>
+
+    <div class="pretty p-default p-round">
+	
+        <input type="radio" id="louie" name="budzet" value="5000" />
+		<div class="state">
+        <label for="louie">5000</label>
+		 </div>
+    </div><br>
+
+</fieldset>
+ <input type="text" name="budzet2"></input>
+<br><br>
+ <button class="btn btn-info" ng-click="prevStep()">Cofnij</button>
+<button class="btn btn-primary" ng-click="nextStep()">Przejdź dalej</button>
+<button class="btn btn-default" ng-click="cancel()">Zamknij</button>
+</div>

@@ -1,0 +1,40 @@
+
+<h3>Ilość gości<h3>
+
+<fieldset class="mainPage">
+    <legend>Proszę wybrać liczbę gości lub wpisać poniżej</legend>
+
+    <div class="pretty p-default p-round">
+        <input type="radio" id="huey" name="goscie" checked value="9"/>
+		 <div class="state">
+        <label for="huey">poniżej 10</label>
+		</div>
+    </div><br>
+
+    <div class="pretty p-default p-round">
+        <input type="radio" id="dewey" name="goscie" value="20"/>
+		<div class="state">
+        <label for="dewey">20</label>
+		</div>
+    </div><br>
+
+     <div class="pretty p-default p-round">
+        <input type="radio" id="louie" name="goscie" value="50" />
+		<div class="state">
+        <label for="louie">50</label>
+    </div>
+	</div><br>
+	<div class="pretty p-default p-round">
+        <input type="radio" id="louie1" name="goscie" value="101" />
+		<div class="state">
+        <label for="louie1">Powyżej 100</label>
+    </div>
+	</div><br>
+
+</fieldset>
+
+        <input type="text" name="goscie2"></input>
+  <br>
+  <button class="btn btn-info" ng-click="prevStep()">Cofnij</button>
+  <button class="btn btn-primary" ng-click="nextStep()">Przejdź dalej</button>
+  <button class="btn btn-default" ng-click="cancel()">Zamknij</button>

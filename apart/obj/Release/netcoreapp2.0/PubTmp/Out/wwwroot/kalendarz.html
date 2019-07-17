@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Kalendarz</title>
+	
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css" >
+
+
+
+ <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+ <script src="https://momentjs.com/downloads/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+</head>
+
+<body>
+
+
+<script>
+
+  
+   $(document).ready(function () {
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+			firstDay :1,
+            defaultView: 'month',
+            editable: false,
+            selectable: true,
+dayClick: function(date) {
+      
+    },
+    select: function(startDate, endDate) {
+		$('#data').val(' od ' + startDate.format() + ' do ' + endDate.format());
+		
+    }
+            
+        });
+
+    });
+
+</script>
+<h3>Proszę podać termin przyjęcia<h3>
+ <div id='calendar'></div>
+  <input type="text" name="termin" id="data"></input>
+<br>
+<button class="btn btn-info" ng-click="prevStep()">Cofnij</button>
+<button class="btn btn-primary" ng-click="nextStep()">Przejdź dalej</button>
+<button class="btn btn-default" ng-click="cancel()">Zamknij</button>
+
+</body>
+</html>
